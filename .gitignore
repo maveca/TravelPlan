@@ -1,0 +1,4 @@
+permissionsAnalyzer.json
+*.app
+.vscode
+Translations/TravelExpenses.g.xlf
