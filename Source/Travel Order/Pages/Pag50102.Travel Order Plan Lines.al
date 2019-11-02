@@ -77,7 +77,7 @@ page 50102 "Travel Order Plan Lines"
     trigger OnNewRecord(BelowxRec: Boolean)
     begin
         if xRec."Line No." <> 0 then begin
-            "Start Date" := xRec."End Date";
+            "Start Date" := xRec."End Date" + xRec."Arrival Time Buffer" + "Departure Time Buffer";
             if xRec."Arrival Location Code" <> '' then
                 "Departure Location Code" := xRec."Arrival Location Code"
             else

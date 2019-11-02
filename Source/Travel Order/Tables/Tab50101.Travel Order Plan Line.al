@@ -20,6 +20,20 @@ table 50101 "Travel Order Plan Line"
             Caption = 'Activity No.';
             DataClassification = CustomerContent;
             TableRelation = "Travel Activity";
+            trigger OnValidate()
+            var
+                TravelActivity: Record "Travel Activity";
+            begin
+                "Departure Time Buffer" := 0;
+                "Arrival Time Buffer" := 0;
+                if TravelActivity.Get("Activity No.") then begin
+                    Description := TravelActivity.Name;
+                    "Departure Time Buffer" := TravelActivity."Departure Time Buffer";
+                    "Arrival Time Buffer" := TravelActivity."Arrival Time Buffer";
+                end;
+                if "Start Date" <> CreateDateTime(0D, 0T) then
+                    "Start Date" := "Start Date" + "Departure Time Buffer";
+            end;
         }
         field(4; Description; Text[80])
         {
@@ -113,6 +127,17 @@ table 50101 "Travel Order Plan Line"
             Caption = 'Departure Name';
             DataClassification = CustomerContent;
         }
+        field(14; "Departure Time Buffer"; Duration)
+        {
+            Caption = 'Minimum Departure Time Buffer';
+            DataClassification = CustomerContent;
+        }
+        field(15; "Arrival Time Buffer"; Duration)
+        {
+            Caption = 'Safe Arrival Time Buffer';
+            DataClassification = CustomerContent;
+        }
+
     }
     keys
     {
