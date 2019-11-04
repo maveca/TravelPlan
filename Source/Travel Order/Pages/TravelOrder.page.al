@@ -4,6 +4,8 @@ page 50101 "Travel Order"
     PageType = Document;
     SourceTable = "Travel Order";
     Caption = 'Travel Order';
+    UsageCategory = Documents;
+    ApplicationArea = All;
 
     layout
     {
@@ -42,6 +44,7 @@ page 50101 "Travel Order"
                 }
                 field("Start Date"; "Start Date")
                 {
+                    ApplicationArea = All;
                     Editable = false;
                     Importance = Promoted;
                 }
@@ -59,7 +62,7 @@ page 50101 "Travel Order"
             part(PlanLines; "Travel Order Plan Lines")
             {
                 Caption = 'Planning Lines';
-                ApplicationArea = Basic, Suite;
+                ApplicationArea = All;
                 SubPageLink = "Travel Order No." = FIELD("No.");
                 UpdatePropagation = Both;
             }
