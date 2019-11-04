@@ -48,8 +48,14 @@ table 50102 "Travel Location"
             trigger OnLookup()
             var
                 PostCode: Record "Post Code";
+                CityTxt: Text;
+                CountyTxt: Text;
             begin
-                PostCode.LookupPostCode(City, "Post Code", County, "Country/Region Code");
+                CityTxt := City;
+                CountyTxt := County;
+                PostCode.LookupPostCode(CityTxt, "Post Code", CountyTxt, "Country/Region Code");
+                City := COPYSTR(CityTxt, 1, MaxStrLen(City));
+                County := COPYSTR(CountyTxt, 1, MaxStrLen(County));
                 Validate("Country/Region Code");
             end;
         }
@@ -78,7 +84,7 @@ table 50102 "Travel Location"
                 CountryRegion: Record "Country/Region";
             begin
                 if CountryRegion.Get("Country/Region Code") then
-                    Country := CountryRegion.Name;
+                    Country := CopyStr(CountryRegion.Name, 1, MaxStrLen(Country));
                 PostCode.ValidateCountryCode(City, "Post Code", County, "Country/Region Code");
             end;
         }

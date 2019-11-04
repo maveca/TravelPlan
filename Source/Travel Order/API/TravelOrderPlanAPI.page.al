@@ -3,11 +3,11 @@ page 50105 "Travel Order Plan API"
     
     PageType = API;
     SourceTable = "Travel Order Plan Line";
-    APIPublisher = 'APIPublisher';
+    APIPublisher = 'demoAPIPublisher';
     APIGroup = 'apiGroup';
     APIVersion = 'v1.0';
-    EntityName = 'TravelOrderPlanLine';
-    EntitySetName = 'TravelOrderPlanLines';
+    EntityName = 'travelOrderPlanLine';
+    EntitySetName = 'travelOrderPlanLines';
     DelayedInsert = true;
     Caption = 'TravelOrderPlanAPI';
     
@@ -17,77 +17,77 @@ page 50105 "Travel Order Plan API"
         {
             repeater(General)
             {
-                field(ActivityNo; "Activity No.")
+                field(activityNo; "Activity No.")
                 {
                     Caption = 'ActivityNo';
                     ApplicationArea = All;
                 }
-                field(ArrivalLocationCode; "Arrival Location Code")
+                field(arrivalLocationCode; "Arrival Location Code")
                 {
                     Caption = 'ArrivalLocationCode';
                     ApplicationArea = All;
                 }
-                field(ArrivalLocationName; "Arrival Location Name")
+                field(arrivalLocationName; "Arrival Location Name")
                 {
                     Caption = 'ArrivalLocationName';
                     ApplicationArea = All;
                 }
-                field(ArrivalTimeBuffer; "Arrival Time Buffer")
+                field(arrivalTimeBuffer; "Arrival Time Buffer")
                 {
                     Caption = 'ArrivalTimeBuffer';
                     ApplicationArea = All;
                 }
-                field(DepartureLocationCode; "Departure Location Code")
+                field(departureLocationCode; "Departure Location Code")
                 {
                     Caption = 'DepartureLocationCode';
                     ApplicationArea = All;
                 }
-                field(DepartureLocationName; "Departure Location Name")
+                field(departureLocationName; "Departure Location Name")
                 {
                     Caption = 'DepartureLocationName';
                     ApplicationArea = All;
                 }
-                field(DepartureTimeBuffer; "Departure Time Buffer")
+                field(departureTimeBuffer; "Departure Time Buffer")
                 {
                     Caption = 'DepartureTimeBuffer';
                     ApplicationArea = All;
                 }
-                field(EndDate; "End Date")
+                field(endDate; "End Date")
                 {
                     Caption = 'EndDate';
                     ApplicationArea = All;
                 }
-                field(LineNo; "Line No.")
+                field(lineNo; "Line No.")
                 {
                     Caption = 'LineNo';
                     ApplicationArea = All;
                 }
-                field(StartDate; "Start Date")
+                field(startDate; "Start Date")
                 {
                     Caption = 'StartDate';
                     ApplicationArea = All;
                 }
-                field(TravelOrderNo; "Travel Order No.")
+                field(travelOrderNo; "Travel Order No.")
                 {
                     Caption = 'TravelOrderNo';
                     ApplicationArea = All;
                 }
-                field(Comment; Comment)
+                field(comment; Comment)
                 {
                     Caption = 'Comment';
                     ApplicationArea = All;
                 }
-                field(Description; Description)
+                field(description; Description)
                 {
                     Caption = 'Description';
                     ApplicationArea = All;
                 }
-                field(Duration; Duration)
+                field(duration; Duration)
                 {
                     Caption = 'Duration';
                     ApplicationArea = All;
                 }
-                field(SystemId; SystemId)
+                field(systemId; SystemId)
                 {
                     Caption = 'SystemId';
                     ApplicationArea = All;
