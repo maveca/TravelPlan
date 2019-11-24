@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ExportedData>
+    <TenantWebServiceCollection>
+        <TenantWebService>
+            <ObjectType>8</ObjectType>
+            <ObjectID>50105</ObjectID>
+            <ServiceName>travelOrderPlans</ServiceName>
+        </TenantWebService>
+    </TenantWebServiceCollection>
+</ExportedData>
